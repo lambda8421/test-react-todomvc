@@ -13,7 +13,7 @@ export default (props) => (
       }
       <button id="delete" onClick={props.deleteItem(props.item.id)}>X</button>
   </li>
-);
+)
 
 
 

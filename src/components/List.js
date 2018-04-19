@@ -14,8 +14,11 @@ export default (props) => (
         </ul>
         <FooterItem {...props} />
     </div>:null
-);
+)
 
+/*
+    Show COMPLETED ALL/REMOVE COMPLETED/COUNT in the bottom of TodoList
+ */
 const FooterItem = ({completeAll, items, clearCompleted}) => (
     <div className="list-footer">
       <BottomOfListClickText
@@ -31,7 +34,7 @@ const FooterItem = ({completeAll, items, clearCompleted}) => (
           null
       }
         <p className="list-count">
-            count:<strong>{items.length}</strong>
+            COUNT:<strong>{items.length}</strong>
         </p>
     </div>
 );

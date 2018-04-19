@@ -68,7 +68,7 @@ export default class TodoApp extends React.Component {
     )
 
   render (){
-    return <div>
+    return <div className="container">
           <TitleComponent title='To-Do'/>
           <Input addItem={this.addItem}/>
           <ToDoList items={this.state.items}

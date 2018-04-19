@@ -1,26 +1,32 @@
 import React from 'react';
 import InputText from '../components/InputText';
+import uuid from 'uuid';
 
 export default class Input extends React.Component {
 
   inputRef = ref => this.input = ref;
 
   addItem = (e) => {
-    console.log(this.input.value)
-    e.preventDefault();  // prevent page reload
-    const text = this.input.value.trim();
-    if (!text) return; // if the input has no value then exit
+      // preventDefault to avoid page reload
+    e.preventDefault();
+
+    //trim input to make sure add valid Todo item
+    const text = this.input.value.trim()
+    if (!text) return
+
+    //add item
     const todo = {
-      id: Math.random() * 1000, // better way to handle this in the future
+      id: uuid(text),
       name: text,
       completed: false
     };
-    this.props.addItem(todo);
-    this.input.value = ''; // clear the input field
+    this.props.addItem(todo)
+
+    //reset input value
+    this.input.value = ''
   }
   
   render() {
-    console.log(this.props)
     return <InputText
         inputRef={this.inputRef}
         addItem={this.addItem}
