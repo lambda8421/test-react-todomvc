@@ -17,7 +17,7 @@ export default (props) => (
 )
 
 /*
-    Show COMPLETED ALL/REMOVE COMPLETED/COUNT in the bottom of TodoList
+    Show COMPLETED ALL/REMOVE COMPLETED in the bottom of TodoList
  */
 const FooterItem = ({completeAll, items, clearCompleted}) => (
     <div className="list-footer">
@@ -34,7 +34,7 @@ const FooterItem = ({completeAll, items, clearCompleted}) => (
           null
       }
         <p className="list-count">
-            COUNT:<strong>{items.length}</strong>
+            <strong>{`${items.length} item${items.length>1?'s':''} left`}</strong>
         </p>
     </div>
 );
