@@ -1,0 +1,12 @@
+@import 'Input.scss';
+@import 'List.scss';
+@import 'Title.scss';
+@import "Item.scss";
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
